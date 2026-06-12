@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD - This is the head of the site, metadata goes here such as CSS linking and site title -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TG Product Case</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<!-- BODY - This is the body of the site, the viewable content goes here -->
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        
+
+
+        <!-- Your site logo should go here, it should also be clickable and send you to the home page -->
+        <div id="logo">
+            <a href="/index.html">
+                <img src="./assets/TGlogo.jpg" alt="TG Logo">
+            </a>
+        </div>
+
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="about.html" class="active">About</a>
+                
+            </li>
+
+            <div class="dropdown">
+                <a href="#">Prototypes ▾</a>
+                <div class="dropdown-menu">
+                <a href="prototype1.html">Prototype 1</a>
+                <a href="prototype2.html">Prototype 2</a>
+                <a href="finaldesign.html">Final Design</a>
+                </div>
+            </div>
+
+            </li>
+        </ul>
+    </nav>
+
+    <!-- MAIN - The page content goes here, it may be different for each page -->
+
+    <main>
+        <div id="page">
+            <!-- YOUR PAGE CONTENT GOES HERE -->
+            <h1>About</h1>
+             <h1>TG ESP32-C3 Zero Protective Case</h1>
+
+            <h2>We have designed a case, named the TG case,  
+            to hold the ESP32-C3 Zero micro-controller board during normal class use by IT students</h2>
+
+            <ul class="list-elements">
+                <li>A case to protect the ESP32-C3 Zero during classroom use, allowing it to be plugged in (USB-C port) & have the pins protected & accessible whilst inside the case</li>
+                <li>The main features of this case are durability & accessibility to the ports/buttons</li>
+                <li>Used by IT students in a classroom with the aim of reducing breakages & fragility</li>
+            </ul>
+            
+        </div>
+        <div>
+            <p>For more information about the TG ESP32-C3 Zero Protective Case, please contact us using the form below.</p>
+        </div>
+            
+        <div>
+            
+        </div>
+    </main>
+            <!-- Contact / Feedback Form -->
+<section style="max-width: 500px; margin: 40px auto; font-family: Calibri, sans-serif;">
+  <h2 style="margin-bottom: 20px;">Contact / Feedback</h2>
+
+  <div style="display: flex; flex-direction: column; gap: 16px;">
+
+    <div>
+      <label for="name" style="display: block; margin-bottom: 4px; font-weight: bold;">Name</label>
+      <input type="text" id="name" placeholder="Your name"
+        style="width: 100%; padding: 8px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 11pt; box-sizing: border-box;">
+    </div>
+
+    <div>
+      <label for="email" style="display: block; margin-bottom: 4px; font-weight: bold;">Email</label>
+      <input type="email" id="email" placeholder="your@email.com"
+        style="width: 100%; padding: 8px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 11pt; box-sizing: border-box;">
+    </div>
+
+    <div>
+
+        <label for="enquiry">Topic of Enquiry</label>
+            <select id="enquiry" name="enquiry">
+            <option value="" disabled selected>Select a topic...</option>
+            <option value="prototype1">Prototype 1</option>
+            <option value="prototype2">Prototype 2</option>
+            <option value="final-design">Final Design</option>
+            <option value="media">Media Enquiries</option>
+            <option value="feedback">Feedback</option>
+            </select>
+    </div>
+
+    <div>
+      <label for="message" style="display: block; margin-bottom: 4px; font-weight: bold;">Message</label>
+      <textarea id="message" rows="5" placeholder="Your feedback or question..."
+        style="width: 100%; padding: 8px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 11pt; box-sizing: border-box; resize: vertical;"></textarea>
+    </div>
+
+    <button onclick="submitForm()"
+      style="padding: 10px 24px; background: #007bff; color: white; border: none; border-radius: 6px; font-size: 11pt; cursor: pointer; align-self: flex-start;">
+      Send
+    </button>
+
+    <p id="form-msg" style="display: none; color: green;">✔ Thanks! Your message has been sent.</p>
+
+  </div>
+</section>
+
+<script>
+  function submitForm() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    // Show confirmation (replace this with real sending logic if needed)
+    document.getElementById('form-msg').style.display = 'block';
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('message').value = '';
+  }
+</script>   
+
+
+    </div>
+    </main>
+    
+    <!-- FOOTER - This is the footer of the site (what is at the bottom of the page) -->
+    <footer>
+        <p>
+            TG Product Case™
+        </p>
+    </footer>
+
+</body>
+</html>
