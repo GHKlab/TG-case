@@ -65,6 +65,11 @@ nav {
   background: #f0f0f0;
 }
 
+.list-elements {
+    border: 1px solid #000;
+    padding: 15px 30px;
+    border-radius: 4px;
+}
 
 body {
     display: flex;
